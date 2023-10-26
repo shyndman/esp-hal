@@ -619,7 +619,7 @@ mod asynch {
             });
 
         #[cfg(not(any(esp32, esp32s2)))]
-        unsafe { &*crate::peripherals::I2C0::PTR }
+        unsafe { &*crate::peripherals::I2C1::PTR }
             .int_ena
             .modify(|_, w| w.txfifo_wm_int_ena().clear_bit());
 
